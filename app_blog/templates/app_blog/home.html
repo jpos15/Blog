@@ -1,0 +1,10 @@
+<h1>Bem-Vindo</h1>
+
+<div>
+    {% for post in object_list %}
+        <p><img src="/media/{{ post.imagem }}" alt="" ></p>
+        <p>{{ post.titulo }}</p>
+        <p>{{ post.conteudo }}</p>
+    {% endfor %}
+
+</div>
