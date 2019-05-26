@@ -21,3 +21,13 @@ class Posts(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class MensagemDeContato(models.Model):
+    nome = models.CharField(max_length=128)
+    email = models.EmailField('E-mail', blank=True, null=True)
+    mensagem = models.TextField()
+    data = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.nome
